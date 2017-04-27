@@ -1,0 +1,10 @@
+METHOD|HEADER1|HEADER2|URL|BODY
+GET|||http://localhost:8081/basepath/getlocation/test|
+GET|||http://localhost:8081/basepath/getlocation/test?queryparam=test|
+POST|Content-Type: application/json|Accept: application/xml|http://localhost:8081/basepath/postlocation/test?queryparam=test|{ "aString": "myString", "aInteger":"27", "aLong":"123"}
+PUT|Content-Type: application/json|Accept: application/xml|http://localhost:8081/basepath/putlocation/test?queryparam=test|{ "aString": "myString", "aInteger":"27", "aLong":"123"}
+DELETE|||http://localhost:8081/basepath/deletelocation/test?queryparam=test|
+
+e.g.
+
+curl -vX POST -H "Content-Type: application/json" -H "Accept: application/xml" http://localhost:8081/basepath/postlocation/test?queryparam=test -d "{ \"aString\": \"myString\", \"aInteger\":\"27\", \"aLong\":\"123\"}"
